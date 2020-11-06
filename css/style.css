@@ -287,16 +287,63 @@
 
 #player-controller {
   width: 40%;
-  background-color: lightgreen;
 }
 #player-controller-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 60%;
-  background: lightblue;
+  color: #FEFEFE;
 }
+#player-controller-top .fa-play-circle {
+  font-size: 30px;
+  padding: 0 30px;
+}
+#player-controller-top .fa-step-backward {
+  padding-left: 15px;
+}
+#player-controller-top .fa-step-forward {
+  padding-right: 15px;
+}
+
 #player-controller-bottom {
+  display: flex;
+  justify-content: center;
+  position: relative;
   height: 40%;
-  background: orange;
+  padding-top: 5px;
 }
+
+#progress-bar {
+  width: 80%;
+  height: 4px;
+  background: #FEFEFE;
+  border-radius: 5px;
+}
+
+#progress-bar::before {
+  content:"0.25";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  font-size: 10px;
+  color: #FEFEFE;
+  text-align: center;
+}
+#progress-bar::after {
+  content:"2.35";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  font-size: 10px;
+  color: #FEFEFE;
+  text-align: center;
+}
+
 
 #player-audio {
   width: 250px;
