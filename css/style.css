@@ -243,16 +243,66 @@
 .cover-round img {
   border-radius: 50%;
 }
-
 /* /sezione artisti popolari */
 /* /parte più grande e centrale della pagina */
 /* /main della pagina */
 /* footer della pagina */
 #footer-page {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 90px;
   background-color: #282828;
 }
+
+#song-data {
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+
+#cover-song-data {
+  width: 30%;
+  padding: 15px;
+}
+
+#titles-song-data {
+  width: 50%;
+}
+
+#cover-song-data img {
+  max-width: 100%;
+}
+
+#titles-song-data h5 {
+  color: white;
+}
+#titles-song-data h6 {
+  color: #747474;
+}
+
+#icons-song-data {
+  color: #747474;
+}
+
+#player-controller {
+  width: 40%;
+  background-color: lightgreen;
+}
+#player-controller-top {
+  height: 60%;
+  background: lightblue;
+}
+#player-controller-bottom {
+  height: 40%;
+  background: orange;
+}
+
+#player-audio {
+  width: 250px;
+  background-color: lightgreen;
+}
+
 /* /footer della pagina */
 @media screen and (min-width: 768px) {
   #nav-logo i {
