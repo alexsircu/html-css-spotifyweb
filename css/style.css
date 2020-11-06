@@ -225,7 +225,24 @@
 }
 /* /sezione creato per john doe */
 /* sezione artisti popolari */
+#popular-artists {
+  padding: 30px 20px 0;
+}
 
+#popular-artists h2 {
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+#popular-artists p {
+  color: #747474;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.cover-round img {
+  border-radius: 50%;
+}
 
 /* /sezione artisti popolari */
 /* /parte più grande e centrale della pagina */
