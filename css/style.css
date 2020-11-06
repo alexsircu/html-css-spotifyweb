@@ -156,10 +156,11 @@
   cursor: pointer;
 	text-decoration: none;
 }
-
+/* sezione navbar della parte centrale della pagina */
 #navbar-main-content {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   padding-bottom: 30px;
 }
@@ -174,7 +175,8 @@
   text-transform: uppercase;
   color: #747474;
 }
-
+/* /sezione navbar della parte centrale della pagina */
+/* sezione recently played */
 #recently-played {
   padding: 0 20px;
 }
@@ -202,10 +204,31 @@
   margin-bottom: 10px;
 }
 
-.cover h4 {
+.cover h5 {
   color: #747474;
 }
-/* parte più grande e centrale della pagina */
+/* /sezione recently played */
+/* sezione creato per john doe */
+#created-for {
+  padding: 30px 20px 0;
+}
+
+#created-for h2 {
+  color: white;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+#created-for p {
+  color: #747474;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+/* /sezione creato per john doe */
+/* sezione artisti popolari */
+
+
+/* /sezione artisti popolari */
+/* /parte più grande e centrale della pagina */
 /* /main della pagina */
 /* footer della pagina */
 #footer-page {
@@ -229,6 +252,11 @@
 @media screen and (max-width: 991px) {
   .cover {
     width: calc(100% / 2);
+  }
+
+  #navbar-main-content {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
