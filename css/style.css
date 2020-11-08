@@ -19,6 +19,7 @@
 .list-column li a {
   text-decoration: none;
 }
+
 /* main della pagina */
 #main-page {
   display: flex;
@@ -49,6 +50,10 @@
   font-size: 30px;
   color: white;
 }
+#nav-logo img:hover {
+  height: 41px;
+  cursor: pointer;
+}
 
 #nav-menu {
   width: 100%;
@@ -57,6 +62,10 @@
 
 #nav-menu .list-column a {
   color: #747474;
+}
+
+#nav-menu .list-column a:hover {
+  color: white;
 }
 
 #nav-playlist {
@@ -89,6 +98,13 @@
   line-height: 30px;
 }
 
+#nav-playlist a:hover {
+  color: white;
+}
+#nav-playlist a:hover::before{
+  background-color: white;
+}
+
 #nav-column-playlists {
   overflow-y: auto;
   width: 100%;
@@ -98,6 +114,10 @@
 #nav-column-playlists .list-column a {
   color: #747474;
   font-size: 14px;
+}
+
+#nav-column-playlists .list-column a:hover {
+  color: white;
 }
 
 #nav-bottom {
@@ -110,6 +130,9 @@
   text-decoration: none;
   color: #747474;
   font-size: 14px;
+}
+#nav-bottom a:hover {
+  color: white;
 }
 
 #nav-bottom .fa-arrow-alt-circle-down {
@@ -139,10 +162,11 @@
   align-items: center;
   position: fixed;
   top: 0;
+  right: 0;
   width: calc(100% - 250px);
   height: 90px;
   background-color: rgba(0, 0, 0, 0.2);
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 .upgrade-btn {
 	background-color: transparent;
@@ -155,6 +179,10 @@
   margin-right: 20px;
   cursor: pointer;
 	text-decoration: none;
+}
+.upgrade-btn:hover {
+  padding: 14px 50px;
+  font-size: 14px;
 }
 /* sezione navbar della parte centrale della pagina */
 #navbar-main-content {
@@ -174,6 +202,10 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #747474;
+}
+
+#navbar-main-content div a:hover {
+  color: white;
 }
 /* /sezione navbar della parte centrale della pagina */
 /* sezione recently played */
@@ -199,11 +231,17 @@
   text-align: center;
 }
 
+/* .cover-image:hover {
+  background: rgba(0, 0, 0, 0.1);
+} */
+
 .cover-image img {
   max-width: 100%;
-  margin-bottom: 10px;
 }
 
+.cover h4 {
+  margin-top: 20px;
+}
 .cover h5 {
   color: #747474;
 }
@@ -270,19 +308,36 @@
   width: 50%;
 }
 
+#titles-song-data a {
+  text-decoration: none;
+}
+
 #cover-song-data img {
   max-width: 100%;
 }
 
-#titles-song-data h5 {
+#titles-song-data h5 a {
   color: white;
 }
-#titles-song-data h6 {
+#titles-song-data h5 a:hover {
+  color: white;
+}
+#titles-song-data h6 a {
   color: #747474;
+}
+#titles-song-data h6 a:hover {
+  color: white;
 }
 
 #icons-song-data {
   color: #747474;
+}
+#icons-song-data .fa-folder {
+  padding-left: 10px;
+}
+#icons-song-data i:hover {
+  color: white;
+  cursor: pointer;
 }
 
 #player-controller {
@@ -304,6 +359,17 @@
 }
 #player-controller-top .fa-step-forward {
   padding-right: 15px;
+}
+#player-controller-top .fa-random:hover,
+#player-controller-top .fa-step-backward:hover,
+#player-controller-top .fa-step-forward:hover,
+#player-controller-top .fa-redo:hover {
+  font-size: 20px;
+  cursor: pointer;
+}
+#player-controller-top .fa-play-circle:hover {
+  font-size: 40px;
+  cursor: pointer;
 }
 
 #player-controller-bottom {
@@ -344,10 +410,30 @@
   text-align: center;
 }
 #progress-bar-state {
+  position: relative;
   width: 10%;
   height: 100%;
   background: #FEFEFE;
   border-radius: 5px;
+}
+#progress-bar-state:hover {
+  background: lightgreen;
+  cursor: pointer;
+}
+
+.point-status {
+  position: absolute;
+  top: -100%;
+  right: -5%;
+  width: 12px;
+  height: 12px;
+  background: lightgrey;
+  border-radius: 50%;
+  display: none;
+}
+#progress-bar-state:hover .point-status {
+  display: block;
+  cursor: pointer;
 }
 
 #player-audio {
@@ -367,10 +453,19 @@
   border-radius: 5px;
 }
 #volume-bar-state {
+  position: relative;
   width: 20%;
   height: 100%;
   background: #FEFEFE;
   border-radius: 5px;
+}
+#volume-bar-state:hover {
+  background: lightgreen;
+  cursor: pointer;
+}
+#volume-bar-state:hover .point-status {
+  display: block;
+  cursor: pointer;
 }
 
 /* /footer della pagina */
@@ -399,16 +494,31 @@
 
 @media screen and (max-width: 767px) {
   #main-nav {
+    position: relative;
     width: 50px;
+    padding-left: 0;
   }
   #nav-logo {
     width: 100%;
     justify-content: center;
-    padding-left: 0;
   }
   #nav-logo img {
     display: none;
   }
+
+  #nav-playlist,
+  #nav-column-playlists {
+    display: none;
+  }
+
+  #nav-bottom {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+
+  }
+
+
 
   #main-content {
     width: calc(100% - 50px);
