@@ -60,6 +60,10 @@
   padding-bottom: 10px;
 }
 
+#nav-menu .list-column {
+  position: relative;
+}
+
 #nav-menu .list-column a {
   color: #747474;
 }
@@ -69,6 +73,17 @@
 
 #nav-menu .list-column a:hover {
   color: white;
+}
+
+#nav-menu .active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  display: inline-block;
+  width: 2px;
+  height: 19px;
+  background: lightgreen;
 }
 
 #nav-playlist {
@@ -161,19 +176,19 @@
   background-color: #141922;
   overflow-y: auto;
 }
+
 #cta {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   position: fixed;
   top: 0;
   right: 0;
   width: calc(100% - 250px);
   height: 90px;
+  text-align: right;
   background-color: rgba(0, 0, 0, 0.2);
   /* overflow-y: hidden; */
 }
 .upgrade-btn {
+  line-height: 90px;
 	background-color: transparent;
   color: white;
   font-size: 12px;
@@ -211,6 +226,21 @@
 
 #navbar-main-content div a:hover {
   color: white;
+}
+
+#navbar-main-content div:first-child {
+  position: relative;
+}
+
+#navbar-main-content .active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 25px;
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: lightgreen;
 }
 /* /sezione navbar della parte centrale della pagina */
 /* sezione recently played */
@@ -297,7 +327,7 @@
   height: 90px;
   background-color: #282828;
 }
-
+/* parte song-data */
 #song-data {
   display: flex;
   align-items: center;
@@ -344,10 +374,12 @@
   color: white;
   cursor: pointer;
 }
-
+/* /parte song-data */
+/* parte player-controller */
 #player-controller {
   width: 40%;
 }
+
 #player-controller-top {
   display: flex;
   justify-content: center;
@@ -440,7 +472,8 @@
   display: block;
   cursor: pointer;
 }
-
+/* /parte player-controller */
+/* parte player-audio */
 #player-audio {
   display: flex;
   justify-content: space-around;
@@ -472,8 +505,9 @@
   display: block;
   cursor: pointer;
 }
-
+/* /parte player-audio */
 /* /footer della pagina */
+/* parte media query della pagina */
 @media screen and (min-width: 768px) {
   #nav-logo i {
     display: none;
@@ -515,6 +549,7 @@
     position: relative;
     width: 50px;
     padding-left: 0;
+    overflow: hidden;
   }
   #nav-logo {
     width: 100%;
@@ -638,4 +673,11 @@
   #volume-bar {
     margin-right: 5px;
   }
+
+  .point-status {
+    width: 8px;
+    height: 8px;
+    top:-50%;
+  }
 }
+/* /parte media query della pagina */
