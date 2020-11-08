@@ -649,6 +649,19 @@
     font-size: 10px;
   }
 
+  #player-controller-top .fa-random:hover,
+  #player-controller-top .fa-step-backward:hover,
+  #player-controller-top .fa-step-forward:hover,
+  #player-controller-top .fa-redo:hover {
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  #player-controller-top .fa-play-circle:hover {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
   #progress-bar {
     width: 60%;
   }
