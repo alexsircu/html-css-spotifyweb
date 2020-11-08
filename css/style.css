@@ -495,6 +495,19 @@
     padding-left: 40px;
     padding-right: 40px;
   }
+
+  #song-data {
+    width: 200px;
+  }
+
+  #icons-song-data .fa-folder,
+  #icons-song-data .fa-heart {
+    padding-left: 5px;
+  }
+
+  #player-audio {
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -554,5 +567,75 @@
 
   #cta {
     width: calc(100% - 50px);
+  }
+/* parte del footer */
+  #song-data {
+    width: 110px;
+  }
+
+  #cover-song-data {
+    padding: 0;
+    margin: 0 0 0 5px;
+  }
+
+  #titles-song-data h5 a {
+    font-size: 10px;
+    padding-left: 5px;
+  }
+  #titles-song-data h6 a {
+    font-size: 8px;
+    padding-left: 5px;
+  }
+
+  #icons-song-data .fa-folder,
+  #icons-song-data .fa-heart {
+    padding-left: 5px;
+  }
+
+  #icons-song-data i {
+    font-size: 10px;
+  }
+
+  #player-controller {
+    width: 30%;
+  }
+  #player-controller-top {
+    max-width: 100%;
+  }
+
+  #player-controller-top .fa-play-circle {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+  #player-controller-top .fa-step-backward,
+  #player-controller-top .fa-step-forward,
+  #player-controller-top .fa-random,
+  #player-controller-top .fa-redo {
+    font-size: 10px;
+  }
+
+  #progress-bar {
+    width: 60%;
+  }
+
+  #progress-bar::before {
+    font-size: 8px;
+    padding-top: 1px;
+  }
+  #progress-bar::after {
+    font-size: 8px;
+    padding-top: 1px;
+  }
+
+  #player-audio {
+    width: 100px;
+  }
+
+  #player-audio .fas {
+    font-size: 5px;
+  }
+
+  #volume-bar {
+    margin-right: 5px;
   }
 }
