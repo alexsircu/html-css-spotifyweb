@@ -63,6 +63,9 @@
 #nav-menu .list-column a {
   color: #747474;
 }
+#nav-menu .list-column i {
+  color: #747474;
+}
 
 #nav-menu .list-column a:hover {
   color: white;
@@ -126,11 +129,13 @@
   color: #747474;
 }
 
-#nav-bottom a {
+#nav-bottom a,
+#nav-bottom i {
   text-decoration: none;
   color: #747474;
   font-size: 14px;
 }
+
 #nav-bottom a:hover {
   color: white;
 }
@@ -506,6 +511,16 @@
     display: none;
   }
 
+  #nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-menu a {
+    display: none;
+  }
+
   #nav-playlist,
   #nav-column-playlists {
     display: none;
@@ -515,10 +530,23 @@
     position: absolute;
     bottom: 0;
     height: auto;
-
   }
 
+  #nav-bottom .list-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  #nav-bottom a {
+    display: none;
+  }
+
+  #account-owner {
+    margin: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
 
   #main-content {
     width: calc(100% - 50px);
